@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo-list</title>
+</head>
+<body>
+    <div class="container" id="tList-container">
+        <h1>Todo-list</h1>
+        <div class="container"  id="p-container">
+            <p>Add your task here:</p>
+            <p id="task-number">Task Completed: 0/0</p>
+        </div>
+        <form>
+            <div class="container" id="input-add-container">
+                <input type="text" id="task" placeholder="Enter task" maxlength="45">
+                <button id="add-btn">Add</button>
+            </div>
+            <p id="character-counter">Character used: 0/45</p>
+            <div class="container">
+                <input type="text" id="search" placeholder="search task.." maxlength="45">
+                <select name="order" id="order">
+                    <option value="by date">Default (by date)</option>
+                    <option value="completed">completed</option>
+                    <option value="pending">pending</option>
+                    <option value="a-z">a-z</option>
+                    <option value="z-a">z-a</option>
+                </select>
+            </div>
+        </form>
+        
+        <div class="container" id="btns-container">
+            <button class="delete-history-btn" id="delete-history-btn">Deleted Todo-list</button>
+            <!-- <div class="select-option-btns">
+                <button class="select-btn">Select</button>
+                <div class="select-btns">
+                    <button class="select-delete-btn">Delete</button>
+                    <button class="cancel-btns" id="cancel-select-btn">Cancel</button>
+                    <button class="select-all-btn">Select All</button>
+                </div>
+            </div> -->
+        </div>
+        <div class="container" id="list-wrapper">
+            <ul class="todo-list-ul" id="list-container">
+                <!-- list of tasks -->
+            </ul>
+            <ul class="history-ul" id="deleted-list-container">
+                
+                <!-- list of deleted task -->
+            </ul>
+        </div>
+    </div>
+    
+    <!-- modals -->
+    <div class="modal" id="modal">
+        <!-- edit -->
+        <div class="modal-content" id="edit-content">
+            <h1>Edit this todo</h1>
+            <input type="text" id="edit-input" >
+            <button class="save-restore-btns" id="save-btn">Save</button>
+            <button class="cancel-btns" id="cancel-btn">Cancel</button>
+        </div>
+        
+        <!-- delete -->
+        <div class="modal-content" id="delete-content">
+            <h1 id="h1-delete-modal"></h1>
+            <p id="delete-text"></p>
+            <button id="confirm-btn">Confirm</button>
+            <button id="cancel-delete-btn">Cancel</button>
+        </div>
+        <div class="modal-content" id="restore-content">
+            <h1 id="h1-restore-modal">Restore this todo-task?</h1>
+            <p id="restore-text"></p>
+            <button class="save-restore-btns" id="restore-confirm-btn">Confirm</button>
+            <button class="cancel-btns" id="cancel-restore-btn">Cancel</button>
+        </div>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
