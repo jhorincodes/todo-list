@@ -19,7 +19,7 @@ A simple and elegant Todo List application built with HTML, CSS, and JavaScript.
 📸Preview
 todo-list-beta-nir.vercel.app
 
-git clone https://github.com/yourusername/todolist-app.git
+git clone https://github.com/jhorincodes/todo-list.git
 
 📚 Technologies Used
 
